@@ -29,9 +29,11 @@ export default function Login() {
             <View>
                 <Pressable
                     onPress={() => router.push("/")}
-                    className="text-base-content text-3xl text-center font-Otomanopee active:opacity-80 duration-300 mb-[60px]"
+                    className="mb-[60px] active:opacity-80 duration-300"
                 >
-                    ISA Making
+                    <Text className="text-base-content font-Otomanopee text-3xl text-center">
+                        ISA MAKING
+                    </Text>
                 </Pressable>
                 <Text className="text-3xl font-bold text-base-content">Iniciar Sesión</Text>
                 <Text className="text-base-content opacity-80">

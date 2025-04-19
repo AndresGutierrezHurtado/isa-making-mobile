@@ -1,4 +1,4 @@
-import { useLocalSearchParams, Stack, Link } from "expo-router";
+import { useLocalSearchParams, Stack, useRouter } from "expo-router";
 import React, { useState } from "react";
 import { View, Text, Image, ScrollView, Pressable } from "react-native";
 import Markdown from "react-native-markdown-display";
@@ -8,14 +8,15 @@ import { useGetData, usePostData } from "../../../hooks/useFetchData";
 
 // Components
 import AppLoading from "../../../components/loading";
-import Icon from "../../../components/icons";
 
 // Hooks
 import { useAuth } from "../../../contexts/authContext";
 
 export default function Product() {
-    const { data: user } = useAuth();
     const { id } = useLocalSearchParams();
+    const router = useRouter();
+
+    const { data: user } = useAuth();
     const { data: product, loading } = useGetData(`/products/${id}`);
     const [selectedSize, setSelectedSize] = useState(null);
     const [selectedImage, setSelectedImage] = useState(null);
@@ -43,7 +44,7 @@ export default function Product() {
             size_id: currentSize.size_id,
         };
 
-        const response = await usePostData(`/users/${user.user_id}/cart`, FetchData);
+        await usePostData(`/users/${user.user_id}/cart`, FetchData);
     };
     return (
         <>
@@ -52,11 +53,7 @@ export default function Product() {
                     headerTitle: product.product_name,
                     headerStyle: { backgroundColor: "#27272a", borderBottomColor: "#3f3f46" },
                     headerTitleStyle: { color: "#fafafa", fontFamily: "Afacad" },
-                    headerLeft: () => (
-                        <Link href="/" className="mx-4">
-                            <Icon name="chevron-left" size={15} color="#fafafa" />
-                        </Link>
-                    ),
+                    headerTintColor: "#fafafa",
                 }}
             />
             <ScrollView className="flex-1 bg-base-100 ">
@@ -83,7 +80,7 @@ export default function Product() {
                                             className="w-28 h-28 rounded overflow-hidden"
                                             style={{
                                                 borderWidth: selectedImg ? 2 : 0,
-                                                borderColor: "var(--color-primary)",
+                                                borderColor: "#3b82f6",
                                             }}
                                         >
                                             <Image
@@ -124,10 +121,11 @@ export default function Product() {
                                 onPress={() => setSelectedSize(size.size_slug)}
                                 className="bg-base-300 rounded w-12 h-9 flex items-center justify-center"
                                 style={{
-                                    backgroundColor: "var(--color-base-200)",
+                                    backgroundColor: "#27272a",
                                     borderWidth: currentSize.size_slug === size.size_slug ? 1 : 0,
-                                    borderColor: "var(--color-base-300)",
+                                    borderColor: "#3f3f46",
                                 }}
+                                key={size.size_id}
                             >
                                 <Text className="text-base-content font-Afacad text-lg">
                                     {size.size_slug}
@@ -147,7 +145,7 @@ export default function Product() {
                     </View>
                     <View className="gap-4">
                         <Text className="text-base-content font-Otomanopee text-2xl ">
-                            Descripcion del producto:
+                            Descripción del producto:
                         </Text>
                         <Markdown
                             style={{
