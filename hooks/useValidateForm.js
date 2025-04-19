@@ -59,6 +59,10 @@ export const useValidateForm = (form, data) => {
                     nonEmpty("El correo es requerido"),
                     email("Ingresa un correo válido")
                 ),
+                user_password: pipe(
+                    string("La contraseña es requerida"),
+                    regex(/^(?:\s*)$|^(?:\S{6,})$/, "La contraseña debe estar vacía o tener más de 6 caracteres sin espacios")
+                ),
             });
             break;
         default:
