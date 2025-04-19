@@ -49,11 +49,6 @@ export default function Profile() {
     return (
         <ScrollView className="flex-1 bg-base-100">
             <View className="p-5 gap-y-5 mb-[100px]">
-                <Text className="text-base-content font-Afacad font-bold text-3xl mb-4">
-                    Perfil de {user.user_name}
-                </Text>
-
-                {/* Info actual */}
                 <View className="mb-4 bg-base-200 border border-base-300 rounded-lg p-4">
                     <Text className="text-base-content font-Afacad font-bold text-lg mb-1">
                         Datos actuales
@@ -64,7 +59,7 @@ export default function Profile() {
                             style={{ width: "150%", height: "150%", resizeMode: "cover" }}
                         />
                     </View>
-                    <Text className="text-base-content font-Afacad font-bold text-xl">
+                    <Text className="text-base-content font-Otomanopee text-xl">
                         {user.user_name} {user.user_lastname}
                     </Text>
                     <Text className="text-base-content/80 font-Afacad">{user.user_email}</Text>

@@ -23,6 +23,11 @@ export default function orders() {
         <ScrollView className="flex-1 bg-base-100">
             <View className="flex-1 p-5 gap-10">
                 <Text className="text-2xl font-Otomanopee text-base-content">Mis pedidos</Text>
+                {orders.length === 0 && (
+                    <Text className="text-base-content font-Afacad text-center">
+                        No tienes ningún pedido
+                    </Text>
+                )}
                 <View className="gap-5">
                     {orders.map((order) => {
                         const totalPrice = order.products.reduce(

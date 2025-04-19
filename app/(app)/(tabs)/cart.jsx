@@ -62,9 +62,14 @@ export default function Cart() {
                 </View>
                 <Text className="text-base-content font-Afacad font-bold text-3xl">Productos</Text>
                 <View className="flex-1 gap-4 mb-[90px]">
-                    {cart.map(({ cart_id, product_quantity, size, product }) => (
+                    {cart.length === 0 && (
+                        <Text className="text-base-content font-Afacad text-center">
+                            No tienes ningún producto en tu carrito
+                        </Text>
+                    )}
+                    {cart.map(({ product_quantity, size, product, ...rest }) => (
                         <View
-                            key={cart_id}
+                            key={rest.product_id + size.size_id}
                             className="flex-row gap-4 bg-base-200 border border-base-300 rounded min-h-44 h-44 overflow-hidden"
                         >
                             <Image
