@@ -10,7 +10,7 @@ import { useValidateForm } from "../../../hooks/useValidateForm";
 import { usePutData } from "../../../hooks/useFetchData";
 
 export default function Profile() {
-    const { data: user, reload } = useAuth();
+    const { data: user, reload, logout } = useAuth();
 
     /**
      {
@@ -71,6 +71,11 @@ export default function Profile() {
                     <Text className="text-base-content font-Afacad  bg-base-100 w-fit px-2 py-1 rounded-lg mt-2">
                         {user.role.role_name}
                     </Text>
+                    <Pressable onPress={logout} className="bg-red-500 rounded-lg p-2 mt-2">
+                        <Text className="text-base-content font-Afacad text-center font-medium">
+                            Cerrar sesión
+                        </Text>
+                    </Pressable>
                 </View>
 
                 <View className="bg-base-200 border border-base-300 rounded-lg p-5 shadow-lg shadow-base-300">
