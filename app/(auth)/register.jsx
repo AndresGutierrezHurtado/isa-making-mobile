@@ -86,7 +86,7 @@ export default function Register() {
                             </View>
                             <Text className="text-base-content">
                                 ¿Ya tienes una cuenta?
-                                <Link href="/login" className="text-primary underline">
+                                <Link href="/login" className="text-primary underline ml-1">
                                     Inicia sesión
                                 </Link>
                             </Text>

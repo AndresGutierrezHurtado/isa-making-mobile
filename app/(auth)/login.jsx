@@ -71,7 +71,7 @@ export default function Login() {
                             </View>
                             <Text className="text-base-content">
                                 ¿No tienes una cuenta?
-                                <Link href="/register" className="text-primary underline">
+                                <Link href="/register" className="text-primary underline ml-1">
                                     Regístrate
                                 </Link>
                             </Text>
