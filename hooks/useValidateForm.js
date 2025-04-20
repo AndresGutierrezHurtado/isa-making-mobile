@@ -13,8 +13,10 @@ export const useValidateForm = (form, data) => {
                 ),
                 user_password: pipe(
                     string("La contraseña es requerida"),
-                    nonEmpty("La contraseña es requerida"),
-                    minLength(6, "La contraseña debe tener al menos 6 caracteres")
+                    regex(
+                        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d]).{6,}$/,
+                        "La contraseña debe tener al menos 6 caracteres, una mayúscula, una minúscula, un número y un símbolo"
+                    )
                 ),
             });
             break;
@@ -37,8 +39,10 @@ export const useValidateForm = (form, data) => {
                 ),
                 user_password: pipe(
                     string("La contraseña es requerida"),
-                    nonEmpty("La contraseña es requerida"),
-                    minLength(6, "La contraseña debe tener al menos 6 caracteres")
+                    regex(
+                        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d]).{6,}$/,
+                        "La contraseña debe tener al menos 6 caracteres, una mayúscula, una minúscula, un número y un símbolo"
+                    )
                 ),
             });
             break;
@@ -61,7 +65,10 @@ export const useValidateForm = (form, data) => {
                 ),
                 user_password: pipe(
                     string("La contraseña es requerida"),
-                    regex(/^(?:\s*)$|^(?:\S{6,})$/, "La contraseña debe estar vacía o tener más de 6 caracteres sin espacios")
+                    regex(
+                        /^$|^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d]).{6,}$/,
+                        "La contraseña debe tener al menos 6 caracteres, una mayúscula, una minúscula, un número y un símbolo, o estar vacía"
+                    )
                 ),
             });
             break;

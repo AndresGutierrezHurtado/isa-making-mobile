@@ -1,3 +1,4 @@
+import { usePathname } from "expo-router";
 import { useState, useEffect } from "react";
 
 const fetchData = async (url, options) => {
@@ -21,6 +22,7 @@ export function useGetData(url) {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [trigger, setTrigger] = useState(1);
+    const path = usePathname();
 
     useEffect(() => {
         const fetchDataAsync = async () => {
@@ -34,7 +36,7 @@ export function useGetData(url) {
             }
         };
         fetchDataAsync();
-    }, [url, trigger]);
+    }, [url, trigger, path]);
 
     const reload = () => {
         setTrigger((prev) => prev + 1);
