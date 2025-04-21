@@ -1,6 +1,8 @@
 # 🛍️ ISA Making Mobile
 
-[Versión en inglés](README.md)
+[English Version](README.md)
+
+[Versión Web](https://github.com/AndresGutierrezHurtado/isa-making)
 
 ISA Making es un sistema de información diseñado para gestionar todo el flujo de trabajo de comercio electrónico: desde la selección y personalización de productos, hasta el pago y seguimiento de entregas. Permite a los usuarios agregar productos al carrito, completar pagos seguros y monitorear el estado de los envíos a través de servicios como Interrapidísimo. Los administradores tienen control total sobre la gestión de productos y actualización de inventario.
 
@@ -10,11 +12,11 @@ ISA Making es un sistema de información diseñado para gestionar todo el flujo 
 
 ## 📑 Tabla de Contenidos
 
-1. [Características Principales](#-características-principales)  
-2. [Tecnologías Utilizadas](#-tecnologías-utilizadas)  
-3. [Arquitectura del Sistema](#%EF%B8%8F-arquitectura-del-sistema)  
-4. [Flujos del Sistema](#-flujos-del-sistema)  
-5. [Instalación](#%EF%B8%8F-instalación)  
+1. [Características Principales](#-características-principales)
+2. [Tecnologías Utilizadas](#-tecnologías-utilizadas)
+3. [Arquitectura del Sistema](#%EF%B8%8F-arquitectura-del-sistema)
+4. [Flujos del Sistema](#-flujos-del-sistema)
+5. [Instalación](#%EF%B8%8F-instalación)
 6. [Contacto](#-contacto)
 
 ---
@@ -61,16 +63,16 @@ Funcionalidad intuitiva y fácil de usar para agregar, quitar y gestionar produc
 
 ### **Frontend**
 
-- **Expo V52**
-- **NativeWind V4**
-- **TailwindCSS V3.14**
-- **Valibot**
+-   **Expo V52**
+-   **NativeWind V4**
+-   **TailwindCSS V3.14**
+-   **Valibot**
 
 ### **Backend (Proyecto NextJS)**
 
-- **Next.js API (App Router)**
-- **Sequelize CLI + MySQL**
-- **Pasarela de pago PayU**
+-   **Next.js API (App Router)**
+-   **Sequelize CLI + MySQL**
+-   **Pasarela de pago PayU**
 
 ---
 
@@ -89,13 +91,13 @@ ISA Making sigue una arquitectura **cliente-servidor**, con una clara separació
 
 Esta sección describe los principales flujos del sistema ISA Making Mobile:
 
-- **Navegación de Productos:** Los usuarios pueden explorar productos, filtrarlos por categorías y ver información detallada.
-- **Agregar al Carrito:** Se pueden añadir productos al carrito y ajustar sus cantidades.
-- **Proceso de Compra:** Un flujo de compra seguro y fluido, incluyendo selección de dirección y métodos de pago.
-- **Confirmación de Pedido:** Envío del pedido y recepción de confirmación.
-- **Seguimiento de Pedido:** Monitoreo del estado de pedidos realizados.
-- **Gestión de Productos (Admin):** Los administradores pueden agregar, editar y eliminar productos.
-- **Gestión de Inventario:** Los administradores pueden actualizar el stock disponible.
+-   **Navegación de Productos:** Los usuarios pueden explorar productos, filtrarlos por categorías y ver información detallada.
+-   **Agregar al Carrito:** Se pueden añadir productos al carrito y ajustar sus cantidades.
+-   **Proceso de Compra:** Un flujo de compra seguro y fluido, incluyendo selección de dirección y métodos de pago.
+-   **Confirmación de Pedido:** Envío del pedido y recepción de confirmación.
+-   **Seguimiento de Pedido:** Monitoreo del estado de pedidos realizados.
+-   **Gestión de Productos (Admin):** Los administradores pueden agregar, editar y eliminar productos.
+-   **Gestión de Inventario:** Los administradores pueden actualizar el stock disponible.
 
 ---
 
@@ -105,8 +107,8 @@ Sigue estos pasos para ejecutar ISA Making de forma local:
 
 ### **Requisitos Previos**
 
-- Node.js >= 18  
-- Tener corriendo el [PROYECTO NEXT](https://github.com/AndresGutierrezHurtado/isa-making)
+-   Node.js >= 18
+-   Tener corriendo el [PROYECTO NEXT](https://github.com/AndresGutierrezHurtado/isa-making)
 
 ### **Pasos**
 
@@ -145,7 +147,8 @@ Sigue estos pasos para ejecutar ISA Making de forma local:
 
 Para dudas, soporte o colaboración, por favor contacta a:
 
-- **Andrés Gutiérrez Hurtado**  
-- Correo: [andres52885241@gmail.com](mailto:andres52885241@gmail.com)  
-- GitHub: [@AndresGutierrezHurtado](https://github.com/AndresGutierrezHurtado)  
-- LinkedIn: [Andrés Gutiérrez](https://www.linkedin.com/in/andr%C3%A9s-guti%C3%A9rrez-hurtado-25946728b/)
+-   **Andrés Gutiérrez Hurtado**
+-   Correo: [andres52885241@gmail.com](mailto:andres52885241@gmail.com)
+-   GitHub: [@AndresGutierrezHurtado](https://github.com/AndresGutierrezHurtado)
+-   LinkedIn: [Andrés Gutiérrez](https://www.linkedin.com/in/andr%C3%A9s-guti%C3%A9rrez-hurtado-25946728b/)
+-   Portafolio: [Link portafolio](https://andres-portfolio-b4dv.onrender.com)
